@@ -903,8 +903,68 @@
     box-shadow: 0 8px 25px rgba(77, 184, 160, 0.4);
   }
 
-  /* Responsive Contact */
+  /* ===== RESPONSIVE DESIGN ===== */
+  
+  /* Tablet & Medium screens (max-width: 968px) */
   @media (max-width: 968px) {
+    nav {
+      padding: 0 30px;
+    }
+
+    .nav-links {
+      gap: 20px;
+    }
+
+    .nav-links a {
+      font-size: 11px;
+    }
+
+    .hero {
+      padding: 50px 40px;
+      min-height: 320px;
+    }
+
+    .hero-name {
+      font-size: 60px;
+    }
+
+    .hero-watermark {
+      font-size: 120px;
+    }
+
+    section {
+      padding: 60px 40px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+    }
+
+    .skills-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 25px;
+    }
+
+    .portfolio-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .testimonials-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .pricing-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .pricing-card.featured {
+      transform: scale(1);
+      grid-column: span 2;
+    }
+
     .contact-grid {
       grid-template-columns: 1fr;
       gap: 50px;
@@ -916,6 +976,467 @@
     
     .form-row {
       grid-template-columns: 1fr;
+    }
+
+    footer {
+      padding: 24px 40px;
+    }
+
+    .watermark {
+      font-size: 100px;
+    }
+  }
+
+  /* Tablet & Small screens (max-width: 768px) */
+  @media (max-width: 768px) {
+    nav {
+      padding: 0 20px;
+      height: auto;
+      min-height: 54px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 12px;
+      padding-top: 12px;
+      padding-bottom: 12px;
+    }
+
+    .nav-logo {
+      font-size: 18px;
+      order: 1;
+    }
+
+    .nav-icons {
+      order: 2;
+      gap: 10px;
+    }
+
+    .nav-links {
+      order: 3;
+      width: 100%;
+      justify-content: center;
+      gap: 16px;
+      padding-top: 8px;
+    }
+
+    .nav-links a {
+      font-size: 10px;
+    }
+
+    .hero {
+      margin-top: 80px;
+      padding: 40px 30px;
+      min-height: 280px;
+    }
+
+    .hero-name {
+      font-size: 48px;
+    }
+
+    .hero-watermark {
+      font-size: 100px;
+      bottom: -10px;
+    }
+
+    .hero-desc {
+      font-size: 12px;
+    }
+
+    section {
+      padding: 50px 30px;
+    }
+
+    .section-title h2 {
+      font-size: 28px;
+    }
+
+    .section-subtitle {
+      font-size: 16px;
+    }
+
+    .skills-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .portfolio-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .resume-grid {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .testimonials-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .pricing-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .pricing-card.featured {
+      grid-column: span 1;
+    }
+
+    .contact-section {
+      padding: 60px 30px;
+    }
+
+    .contact-form {
+      padding: 30px 20px;
+    }
+
+    footer {
+      padding: 20px 30px;
+      flex-direction: column;
+      gap: 16px;
+      text-align: center;
+    }
+
+    .watermark {
+      font-size: 80px;
+      opacity: 0.08;
+    }
+
+    .hero-watermark {
+      opacity: 0.06;
+    }
+
+    .toast {
+      bottom: 20px;
+      right: 20px;
+      left: 20px;
+      font-size: 13px;
+      padding: 14px 18px;
+    }
+  }
+
+  /* Mobile screens (max-width: 576px) */
+  @media (max-width: 576px) {
+    body {
+      font-size: 13px;
+    }
+
+    nav {
+      padding: 8px 15px;
+    }
+
+    .nav-logo {
+      font-size: 16px;
+      letter-spacing: 1px;
+    }
+
+    .nav-icons span {
+      width: 26px;
+      height: 26px;
+      font-size: 10px;
+    }
+
+    .nav-resume-btn {
+      padding: 5px 10px;
+      font-size: 11px;
+      gap: 4px;
+    }
+
+    .hero {
+      margin-top: 90px;
+      padding: 30px 20px;
+      min-height: 240px;
+    }
+
+    .hero-greeting {
+      font-size: 10px;
+      letter-spacing: 2px;
+    }
+
+    .hero-name {
+      font-size: 36px;
+      letter-spacing: -0.5px;
+    }
+
+    .hero-title {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+    }
+
+    .hero-desc {
+      font-size: 11px;
+      margin-bottom: 20px;
+    }
+
+    .hero-social {
+      gap: 8px;
+      margin-bottom: 20px;
+    }
+
+    .hero-social a {
+      width: 28px;
+      height: 28px;
+    }
+
+    .hero-btns {
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+    }
+
+    .btn {
+      width: 100%;
+      text-align: center;
+      justify-content: center;
+      padding: 12px 20px;
+      font-size: 11px;
+    }
+
+    .hero-watermark {
+      font-size: 80px;
+      left: 50%;
+      transform: translateX(-50%);
+      bottom: -10px;
+    }
+
+    section {
+      padding: 40px 20px;
+    }
+
+    .section-title h2 {
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+    }
+
+    .section-divider {
+      width: 30px;
+      margin: 10px auto 0;
+    }
+
+    .skills-grid {
+      gap: 15px;
+    }
+
+    .skill-name {
+      font-size: 12px;
+    }
+
+    .skill-pct {
+      font-size: 11px;
+    }
+
+    .skill-desc {
+      font-size: 10px;
+    }
+
+    .portfolio-grid {
+      gap: 16px;
+    }
+
+    .portfolio-img {
+      height: 140px;
+    }
+
+    .portfolio-img-label {
+      font-size: 24px;
+    }
+
+    .portfolio-card h4 {
+      font-size: 14px;
+    }
+
+    .portfolio-card p {
+      font-size: 10px;
+    }
+
+    .resume-grid {
+      gap: 30px;
+    }
+
+    .resume-col h3 {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    .resume-item {
+      padding-left: 18px;
+      padding-bottom: 24px;
+    }
+
+    .resume-date {
+      font-size: 9px;
+    }
+
+    .resume-title-text {
+      font-size: 13px;
+    }
+
+    .resume-org {
+      font-size: 11px;
+    }
+
+    .resume-desc {
+      font-size: 10px;
+    }
+
+    .testimonials-grid {
+      gap: 16px;
+    }
+
+    .testimonial-card {
+      padding: 22px 18px;
+    }
+
+    .testimonial-quote {
+      font-size: 50px;
+    }
+
+    .testimonial-text {
+      font-size: 11px;
+      line-height: 1.7;
+    }
+
+    .author-photo {
+      width: 40px;
+      height: 40px;
+      font-size: 14px;
+    }
+
+    .author-name {
+      font-size: 12px;
+    }
+
+    .author-role {
+      font-size: 10px;
+    }
+
+    .pricing-grid {
+      gap: 16px;
+    }
+
+    .pricing-card {
+      padding: 28px 20px;
+    }
+
+    .pricing-price {
+      font-size: 40px;
+    }
+
+    .pricing-price sup {
+      font-size: 20px;
+    }
+
+    .pricing-features li {
+      font-size: 11px;
+    }
+
+    .contact-section {
+      padding: 50px 20px;
+    }
+
+    .contact-grid {
+      gap: 40px;
+    }
+
+    .contact-info-item {
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .contact-icon {
+      width: 42px;
+      height: 42px;
+    }
+
+    .contact-label {
+      font-size: 9px;
+    }
+
+    .contact-value {
+      font-size: 13px;
+    }
+
+    .contact-form {
+      padding: 25px 18px;
+    }
+
+    .form-group label {
+      font-size: 10px;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      padding: 12px 14px;
+      font-size: 13px;
+    }
+
+    .form-group textarea {
+      min-height: 120px;
+    }
+
+    .contact-form .btn-primary {
+      width: 100%;
+      padding: 12px 30px;
+      font-size: 12px;
+    }
+
+    footer {
+      padding: 18px 20px;
+      gap: 12px;
+    }
+
+    .footer-logo {
+      font-size: 16px;
+    }
+
+    .footer-social {
+      gap: 8px;
+    }
+
+    .footer-social a {
+      width: 28px;
+      height: 28px;
+    }
+
+    .footer-copy {
+      font-size: 10px;
+    }
+
+    .watermark {
+      font-size: 60px;
+    }
+
+    .dot-pattern {
+      width: 60px;
+      height: 60px;
+    }
+
+    .load-more-wrap {
+      margin-top: 16px;
+    }
+  }
+
+  /* Extra small screens (max-width: 400px) */
+  @media (max-width: 400px) {
+    .hero-name {
+      font-size: 32px;
+    }
+
+    .section-title h2 {
+      font-size: 22px;
+    }
+
+    .portfolio-img {
+      height: 120px;
+    }
+
+    .portfolio-img-label {
+      font-size: 20px;
     }
   }
 
