@@ -1654,37 +1654,37 @@
   <div class="skills-grid">
     <div>
       <div class="skill-item">
-        <div class="skill-header"><span class="skill-name">React.js</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div>
+        <div class="skill-header"><span class="skill-name">React.js</span><span class="skill-pct">90%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="90%" style="width:0%"></div></div>
         <p class="skill-desc">Building dynamic and responsive user interfaces with reusable components.</p>
       </div>
       <div class="skill-item">
-        <div class="skill-header"><span class="skill-name">Node.js & Express</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div>
+        <div class="skill-header"><span class="skill-name">Node.js & Express</span><span class="skill-pct">85%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="85%" style="width:0%"></div></div>
         <p class="skill-desc">Creating RESTful APIs and server-side logic with secure authentication.</p>
       </div>
     </div>
     <div>
       <div class="skill-item">
-        <div class="skill-header"><span class="skill-name">JavaScript (ES6+)</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div>
+        <div class="skill-header"><span class="skill-name">JavaScript (ES6+)</span><span class="skill-pct">90%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="90%" style="width:0%"></div></div>
         <p class="skill-desc">Modern JavaScript with async/await, arrow functions, and ES6+ features.</p>
       </div>
       <div class="skill-item">
-        <div class="skill-header"><span class="skill-name">MongoDB</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div>
+        <div class="skill-header"><span class="skill-name">MongoDB</span><span class="skill-pct">80%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="80%" style="width:0%"></div></div>
         <p class="skill-desc">NoSQL database design, CRUD operations, and data modeling.</p>
       </div>
     </div>
     <div>
       <div class="skill-item">
-        <div class="skill-header"><span class="skill-name">HTML5 & Tailwind CSS</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div>
+        <div class="skill-header"><span class="skill-name">HTML5 & Tailwind CSS</span><span class="skill-pct">95%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="95%" style="width:0%"></div></div>
         <p class="skill-desc">Semantic HTML and utility-first CSS framework for responsive designs.</p>
       </div>
       <div class="skill-item">
-        <div class="skill-header"><span class="skill-name">JWT & Bcrypt</span></div>
-        <div class="skill-bar"><div class="skill-fill" style="width:100%"></div></div>
+        <div class="skill-header"><span class="skill-name">JWT & Bcrypt</span><span class="skill-pct">80%</span></div>
+        <div class="skill-bar"><div class="skill-fill" data-width="80%" style="width:0%"></div></div>
         <p class="skill-desc">Implementing secure user authentication and session management.</p>
       </div>
     </div>
@@ -1959,16 +1959,17 @@
     lucide.createIcons();
   });
 
-  // Animate skill bars on scroll
+  // Animate skill bars on scroll when they enter the viewport
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.querySelectorAll('.skill-fill').forEach(bar => {
-          bar.style.width = bar.style.width;
+          const targetWidth = bar.getAttribute('data-width') || '100%';
+          bar.style.width = targetWidth;
         });
       }
     });
-  }, { threshold: 0.3 });
+  }, { threshold: 0.2 });
 
   document.querySelectorAll('.skills-section').forEach(s => observer.observe(s));
 
